@@ -17,4 +17,23 @@ public class codingBatScratch {
             return false;
         }
     }
+
+    // Given an array of ints, return true if every element is a 1 or a 4
+    // only14([1, 4, 1, 4]) → true
+    // only14([1, 4, 2, 4]) → false
+    // only14([1, 1]) → true
+
+    public static boolean only14(int[] nums) {
+        int count = 0;
+        for (int item : nums) {
+            if (item == 1 || item == 4) {
+                count++;
+            }
+        }
+        if (count == nums.length) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
