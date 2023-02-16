@@ -44,9 +44,17 @@ public class codingBatScratch {
 
     public static int sum13(int[] nums) {
         int sum = 0;
-        for (int item = 1; item < nums.length; item++) {
-            if (nums[item] != 13 && nums[item-1] != 13) {
-                sum = sum +nums[item];
+        if (nums.length == 0) {
+            return 0;
+        }
+        if (nums[0] != 13) {
+            sum = nums[0];
+        }
+        for (int index = 1; index < nums.length; index++) {
+            if (nums[index] != 13 && nums[index-1] != 13) {
+                sum += nums[index];
+            } else {
+                sum+=0;
             }
         }
         return sum;
